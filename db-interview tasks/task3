@@ -13,8 +13,8 @@ values ('item1', 10),
        ('item4', 10),
        ('item5', 15);
 
---  Ответ: SELECT title FROM example1
-          WHERE cost = (SELECT MAX(cost) FROM example1);
+--  Ответ:  SELECT title FROM example1
+            WHERE cost = (SELECT MAX(cost) FROM example1);
   
 -- Задание 2
 -- Вывести последние комментарии каждого автора(по дате)
@@ -31,3 +31,7 @@ values ('aaa', 'ivanov', '2024-03-18 09:45:53 +00:00'),
        ('ccc', 'ivanov', '2024-03-20 17:01:00 +00:00'),
        ('ddd', 'petrov', '2024-03-18 09:45:53 +00:00'),
        ('eee', 'sidorov', '2024-03-19 11:21:53 +00:00');
+
+--  Ответ:  SELECT author, comment FROM example2
+            GROUP BY author
+            HAVING date = MAX(date);
