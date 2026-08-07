@@ -1,10 +1,3 @@
-package main 
-
-import (
-    "fmt"
-    "sort"
-  )
-
 //Условие задачи
 //Дан массив целых чисел nums и целое число k. Нужно написать функцию,
 //которая вынимает из массива nums k наиболее часто встречающихся элементов.
@@ -16,13 +9,18 @@ import (
 //# вывод (в любом порядке)
 //[1, 2]
 
+package main 
+
+import (
+    "fmt"
+    "sort"
+  )
 
 func main() {
   arr := []int{1,1,1,2,2,3}
   k := 2
   fmt.Print(topKFrequentElements(arr, k))
 }
-
 
 func topKFrequentElements(arr []int, k int) []int {
   mHash := make(map[int]int)
